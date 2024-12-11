@@ -31,3 +31,5 @@ nav = [
 avatar = "images/imageee.png"
 
 
+generate_search_index = true
+

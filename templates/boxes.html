@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+<div class="uk-width-1-1 uk-width-expand@m">
+
+    <article class="uk-article">
+
+        <h1 class="uk-article-title">Category boxes section</h1>
+
+        <p class="uk-text-lead uk-text-muted">Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis.</p>
+
+        <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            
+
+
+
+<img class="uk-border-circle avatar" src="/uploads/avatar-evan.png" alt="Evan Wells">
+
+
+<div>
+
+Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Evan Wells</span></span><br>
+
+<time datetime="2020-04-01T05:11:38-05:00" itemprop="datePublished">
+
+Apr 1, 2020
+</time>
+</div>
+        </div>
+
+        <div class="article-content link-primary">
+            <p>Home page category boxes are added in <code class="highlighter-rouge">_data/navigation_boxes.yml</code>, e.g.:</p>
+<div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Getting Started</span>
+<span class="s">desc</span><span class="pi">:</span> <span class="s">Get your account up and running in just few easy steps</span>
+<span class="s">icon</span><span class="pi">:</span> <span class="s">settings</span>
+<span class="s">doc</span><span class="pi">:</span> <span class="s">usage</span>
+
+<span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Account and Billing</span>
+<span class="s">desc</span><span class="pi">:</span> <span class="s">Managing your account, creating new users and exporting data</span>
+<span class="s">icon</span><span class="pi">:</span> <span class="s">credit-card</span>
+<span class="s">doc</span><span class="pi">:</span> <span class="s">drafts</span>
+</code></pre>
+</div>
+
+<p>All available icons can be found <a href="https://getuikit.com/docs/icon#library">here</a>.</p>
+
+<p>Add boxes section to a page using the following include:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="pi">{</span><span class="err">%</span> <span class="nv">include boxes.html columns="3" title="Browse Topics" subtitle="Chose an option that you need help with or search above" %</span><span class="pi">}</span>
+</code></pre>
+</div>
+
+
+            
+                <div class="share uk-text-center uk-margin-medium-top">
+
+<a class="uk-link-muted" href="https://twitter.com/intent/tweet?text=Category boxes section&url=/docs/boxes/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+
+
+<a class="uk-link-muted uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fboxes%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+
+</div>
+            
+        </div>
+
+        
+
+        <hr class="uk-margin-medium">
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="uk-margin-large-top paginate-post">
+<div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
+<div>
+    
+      
+      
+      
+        <h5>Hero page header</h5>
+        <div><a class="remove-underline hvr-back" href="/docs/hero/">&larr; Previous</a></div>
+    
+</div>
+<div>
+    
+      
+      
+      
+        <h5>Fearured docs section</h5>
+        <div class="uk-text-right"><a class="remove-underline hvr-forward" href="/docs/featured/">Next &rarr;</a></div>
+    
+</div>
+</div>
+</div>
+
+
+
+        <div class="uk-margin-large-top">
+<h3>Related Docs</h3>
+
+
+
+
+
+<ul class="uk-list link-secondary">
+
+
+
+
+
+
+
+
+<li><a href="/docs/alerts/">Adding alerts to content</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/docs/cta/">Call to action section</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/docs/faq/">Frequently asked questions section</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/docs/featured/">Fearured docs section</a></li>
+
+
+
+</ul>
+</div>
+
+
+        
+    </article>
+
+    <script>
+        // Table of contents scroll to
+        UIkit.scroll('#markdown-toc a', {
+            duration: 400,
+            offset: 120
+        });
+    </script>
+
+</div>
+
+</div>
+</div>
+
+{% endblock content %}
