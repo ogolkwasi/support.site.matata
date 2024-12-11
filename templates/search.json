@@ -1,0 +1,11 @@
+[
+  {% for page in site.pages %}
+    {
+      "title": "{{ page.title | escape | safe }}",
+      "url": "{{ page.permalink | safe }}",
+      "summary": "{{ page.summary | escape | safe }}",
+      "body": {{ page.content | jsonify }}
+    }{% if not loop.last %},{% endif %}
+  {% endfor %}
+  ]
+  
