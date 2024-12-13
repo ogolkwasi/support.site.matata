@@ -1,7 +1,7 @@
 +++
 title = "Posts"
 description = "A timeline of changes and updates"
-template = "post5.html"
+template = "post1.html"
 +++
 
 # Welcome to the Changelog Timeline

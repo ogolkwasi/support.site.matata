@@ -108,7 +108,8 @@
         }
         </script>
         
-        
+        <script src="/static/js/elasticlunr.min.js"></script>
+
         
         <script src="http://127.0.0.1:35729/livereload.js"></script></head>
         
@@ -268,7 +269,6 @@
         
 
 
-
 <div class="uk-section">
     <div class="uk-container">
         <div class="uk-grid-large uk-grid" data-uk-grid="">
@@ -281,7 +281,7 @@
 
 
 
-                      <li class=""><a href="/docs/installation/">Theme installation</a></li>
+                      <li class="uk-active"><a href="/docs/installation/">Theme installation</a></li>
 
 
 
@@ -371,7 +371,7 @@
 
 
 
-                      <li class="uk-active"><a href="/docs/translation/">Translation</a></li>
+                      <li class=""><a href="/docs/translation/">Translation</a></li>
 
 
 
@@ -405,274 +405,272 @@
 
 
 
-<div class="uk-width-1-1 uk-width-expand@m">
-
-    <article class="uk-article">
-
-        <h1 class="uk-article-title">Basic theme setup</h1>
-
-        <p class="uk-text-lead uk-text-muted">This document covers the setup and options of theme feature described in the doc title</p>
-
-        <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-            
 
 
 
-<img class="uk-border-circle avatar" src="/uploads/avatar-sara.png" alt="Sara Galen">
 
 
-<div>
 
-Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sara Galen</span></span><br>
 
-<time datetime="2020-04-01T05:11:38-05:00" itemprop="datePublished">
-
-Apr 1, 2020
-</time>
-</div>
+    
+                <div class="uk-width-1-1 uk-width-expand@m">
+    
+                    <article class="uk-article">
+    
+                        <h1 class="uk-article-title">Theme installation</h1>
+    
+                        <p class="uk-text-lead uk-text-muted">This document covers the setup and options of theme feature described in the doc title</p>
+    
+                        <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+    
+    
+    
+    
+      <img class="uk-border-circle avatar" src="/uploads/avatar-sara.png" alt="Sara Galen">
+    
+    
+    <div>
+    
+        Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sara Galen</span></span><br>
+    
+      <time datetime="2020-04-01T05:11:38-05:00" itemprop="datePublished">
+    
+        Apr 1, 2020
+      </time>
+    </div>
+                        </div>
+    
+                        <div class="article-content link-primary">
+                            <p>Install the dependencies with <a href="http://bundler.io/">Bundler</a>:</p>
+    
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>bundle install
+    </code></pre>
+    </div>
+    
+    <p>Run the following to generate your site:</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+    </code></pre>
+    </div>
+    
+    <p>You can find more on <a href="https://jekyllrb.com/docs/deployment-methods/">Deployment Methods</a> page on Jekyll website.</p>
+    
+    
+                                <div class="share uk-text-center uk-margin-medium-top">
+    
+            <a class="uk-link-muted" href="https://twitter.com/intent/tweet?text=Theme installation&url=/docs/installation/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    
+    
+            <a class="uk-link-muted uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Finstallation%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    
+    </div>
+    
+                        </div>
+    
+    
+    
+                        <hr class="uk-margin-medium">
+    
+    
+    
+    
+    
+    
+        <div class="uk-margin-large-top paginate-post">
+            <div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
+                <div>
+    
+    
+                </div>
+                <div>
+    
+    
+    
+    
+                        <h5>Basic theme setup</h5>
+                        <div class="uk-text-right"><a class="remove-underline hvr-forward" href="/docs/setup/">Next &rarr;</a></div>
+    
+                </div>
+            </div>
         </div>
-
-        <div class="article-content link-primary">
-            <h3 id="site-and-author-details">Site and author details</h3>
-<p>Add your site and author details in <code class="highlighter-rouge">_config.yml</code>:</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">title</span><span class="pi">:</span>              <span class="s">Docs</span>
-<span class="s">description</span><span class="pi">:</span>        <span class="s">Documentation Jekyll theme.</span>
-<span class="s">lang</span><span class="pi">:</span>               <span class="s">en</span>
-
-<span class="c1"># Site subpath, e.g. /blog</span>
-<span class="s">baseurl</span><span class="pi">:</span>            <span class="s2">"</span><span class="s">"</span>
-
-<span class="c1"># Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/</span>
-<span class="s">permalink</span><span class="pi">:</span>          <span class="s">/:title/</span>
-
-<span class="c1"># Site base hostname &amp; protocol, e.g. http://example.com</span>
-<span class="s">url</span><span class="pi">:</span>                <span class="s2">"</span><span class="s">https://docs.jekyll.plus"</span>
-
-<span class="c1"># Site logo # e.g. logo.png, upload logo image file to /uploads/ folder</span>
-<span class="s">logo</span><span class="pi">:</span>      
-
-<span class="c1"># Default author settings</span>
-<span class="s">author</span><span class="pi">:</span>
-<span class="s">name</span><span class="pi">:</span>           <span class="s">Pete Seth</span>
-<span class="s">title</span><span class="pi">:</span>          <span class="s">Lead Developer</span>  
-<span class="s">avatar</span><span class="pi">:</span>         <span class="s">avatar-tom.png</span>
-</code></pre>
-</div>
-
-<h3 id="update-favicon">Update favicon</h3>
-
-<p>You can find the current favicon (favicon.png) inside the theme <code class="highlighter-rouge">/uploads/</code> directory, just replace it with your new favicon.</p>
-
-            
-                <div class="share uk-text-center uk-margin-medium-top">
-
-<a class="uk-link-muted" href="https://twitter.com/intent/tweet?text=Basic theme setup&url=/docs/setup/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-
-
-<a class="uk-link-muted uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fsetup%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
-
-</div>
-            
+    
+    
+    
+                        <div class="uk-margin-large-top">
+        <h3>Related Docs</h3>
+    
+    
+    
+    
+    
+        <ul class="uk-list link-secondary">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <li><a href="/docs/changelog/">Creating a changelog</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <li><a href="/docs/contact/">Contact form (via FormSpree)</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <li><a href="/docs/docs/">Creating docs posts</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <li><a href="/docs/footer/">Footer options</a></li>
+    
+    
+    
+        </ul>
+    </div>
+    
+    
+    
+                    </article>
+    
+                    <script>
+                        // Table of contents scroll to
+                        UIkit.scroll('#markdown-toc a', {
+                            duration: 400,
+                            offset: 120
+                        });
+                    </script>
+    
+                </div>
+    
         </div>
-
-        
-
-        <hr class="uk-margin-medium">
-
-        
-
-
-
-
-
-
-
-<div class="uk-margin-large-top paginate-post">
-<div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
-<div>
+    </div>
     
-      
-      
-      
-        <h5>Theme installation</h5>
-        <div><a class="remove-underline hvr-back" href="/docs/installation/">&larr; Previous</a></div>
     
-</div>
-<div>
+       
     
-      
-      
-      
-        <h5>Navigation bar</h5>
-        <div class="uk-text-right"><a class="remove-underline hvr-forward" href="/docs/navigation/">Next &rarr;</a></div>
     
-</div>
-</div>
-</div>
-
-
-
-        <div class="uk-margin-large-top">
-<h3>Related Docs</h3>
-
-
-
-
-
-<ul class="uk-list link-secondary">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/docs/changelog/">Creating a changelog</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/docs/contact/">Contact form (via FormSpree)</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/docs/docs/">Creating docs posts</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/docs/footer/">Footer options</a></li>
-
-
-
-</ul>
-</div>
-
-
-        
-    </article>
-
-    <script>
-        // Table of contents scroll to
-        UIkit.scroll('#markdown-toc a', {
-            duration: 400,
-            offset: 120
-        });
-    </script>
-
-</div>
-
-</div>
-</div>
-
+    
+    
+    
+    
+    
+x
+    
+        </body>
+    
+    </html>
+    
+    
 
 
 
