@@ -1,8 +1,13 @@
 +++
-title = "Documentation"
-description = "Explore the guides and tutorials"
+title = " Customize"
+description = "Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur."
+extra = { author = "Vincent Galen", date = "2020-04-01" }
 sort_by = "weight"
 template = "install.html"
+in_search_index = true
 +++
 
-Welcome to the documentation! Use the links on the left to navigate.
+
+ # Customization
+
+ ## This document covers the setup and options of theme feature described in the doc title

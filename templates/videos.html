@@ -145,9 +145,9 @@
 
     <article class="uk-article">
 
-        <h1 class="uk-article-title">Basic theme setup</h1>
+        
 
-        <p class="uk-text-lead uk-text-muted">This document covers the setup and options of theme feature described in the doc title</p>
+        <p class="uk-text-lead uk-text-muted">{{ section.content | safe }}</p>
 
         <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
             
@@ -159,11 +159,11 @@
 
 <div>
 
-Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sara Galen</span></span><br>
+Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ section.extra.author }}</span></span><br>
 
 <time datetime="2020-04-01T05:11:38-05:00" itemprop="datePublished">
 
-Apr 1, 2020
+  {{ section.extra.date }}
 </time>
 </div>
         </div>
