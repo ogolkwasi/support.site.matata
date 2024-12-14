@@ -1,7 +1,10 @@
 +++
 title = "Posts"
 description = "A timeline of changes and updates"
-template = "post2.html"
+template = "posts.html"
+date = 2024-12-03
+[extra]
+author = "Vincent Lan"
 +++
 
 # Welcome to the Changelog Timeline
