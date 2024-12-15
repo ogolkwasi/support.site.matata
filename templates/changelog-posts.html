@@ -23,7 +23,7 @@
                         
                         <time datetime="2019-04-22T00:00:00-05:00" itemprop="datePublished">
                             
-                            Apr 22, 2019
+                           {{ page.date | safe }}
                         </time>
                         
                     </div>
@@ -38,9 +38,7 @@
                 </div> 
                 <div class="article-content"><p>April comes with a whole bunch of updates across our stack, the main focus for this month in regards to what was released is around:</p>
 
-<p>Further improving system, and allowing you to compare your results against wide averages for deflection rates
-Improvements to our tool to give you and your team more control
-And various other new features, updates, and bug fixes along the way.</p>
+<p>{{page.content | safe }}</p>
 
 <p><span class="uk-label" style="background-color: #3778ff">Added</span></p>
 <ul>
