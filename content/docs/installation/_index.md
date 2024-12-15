@@ -45,5 +45,5 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
  
 Sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-#### *Update favicon*ßß
+#### *Update favicon*
 You can find the current favicon (favicon.png) inside the theme /uploads/ directory, just replace it with your new favicon.

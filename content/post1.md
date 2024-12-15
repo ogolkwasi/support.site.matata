@@ -1,6 +1,6 @@
 +++
 title = "Understanding company billing and accounts"
-description = "A timeline of changes and updates"
+description = "A timeline of changes and updates, Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam."
 next_post = "Posts"
 date = 2024-12-13
 

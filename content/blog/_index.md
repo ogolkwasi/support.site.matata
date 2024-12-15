@@ -1,5 +1,5 @@
 +++
-title = "Blog"
+title = "Blog Page"
 description = "A collection of blog posts"
 template = "blog.html"
 +++

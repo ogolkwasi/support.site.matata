@@ -1,75 +1,65 @@
+
+
+
+
+
+
+
 {% extends "base.html" %}
 
 {% block content %}
-
-
 <div class="uk-section">
     <div class="uk-container uk-container-xsmall">
-
         <h1 class="uk-article-title uk-text-center">Blog</h1>
 
-
+        {# Manually include each post using get_page #}
+        {% set post1 = get_page(path="post1.md") %}
         <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight uk-width-1-1 uk-margin">
-            <a class="uk-position-cover" href="/post1/"></a>
+            <a class="uk-position-cover" href="{{ post1.permalink }}"></a>
             <div class="uk-card-header">
                 <div class="uk-grid-small uk-flex-middle uk-grid" uk-grid="">
-
-
-
-                        <div class="uk-width-auto uk-first-column">
-
-                            <img class="uk-border-circle avatar" src="/images/avatar-alex.png" alt="Alex Koch">
-                        </div>
-
-
-
+                    <div class="uk-width-auto uk-first-column">
+                        <img class="uk-border-circle avatar" src="{{ post1.extra.avatar | default(value='/images/default-avatar.png') }}" alt="{{ post1.extra.author | safe }}">
+                    </div>
                     <div class="uk-width-expand">
-                        <h3 class="uk-card-title uk-margin-remove-bottom">Getting a JavaScript console error</h3>
-                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2017-05-25T00:00:00-05:00">
-
-                            May 25, 2017
-                        </time></p>
+                        <h3 class="uk-card-title uk-margin-remove-bottom">{{ post1.title }}</h3>
+                        <p class="uk-text-meta uk-margin-remove-top">
+                            <time datetime="{{ post1.date }}">{{ post1.date | date(format="%B %d, %Y") }}</time>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="uk-card-body">
-                <p>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.</p>
-
-
+                <p>{{ post1.description }}</p>
             </div>
             <div class="uk-card-footer">
                 <span class="uk-button uk-button-text">Read more →</span>
             </div>
-
         </div>
 
+
+
+             
+
+        {# Manually include each post using get_page #}
+        {% set post2 = get_page(path="post2.md") %}
         <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight uk-width-1-1 uk-margin">
-            <a class="uk-position-cover" href="/post2/"></a>
+            <a class="uk-position-cover" href="{{ post2.permalink }}"></a>
             <div class="uk-card-header">
                 <div class="uk-grid-small uk-flex-middle uk-grid" uk-grid="">
-
-
-
-                        <div class="uk-width-auto uk-first-column">
-
-                            <img class="uk-border-circle avatar" src="/images/avatar-john.png" alt="John Brown">
-                        </div>
-
-
-
+                    <div class="uk-width-auto uk-first-column">
+                        <img class="uk-border-circle avatar" src="{{ post12.extra.avatar | default(value='/images/default-avatar.png') }}" alt="{{ post1.extra.author | safe }}">
+                    </div>
                     <div class="uk-width-expand">
-                        <h3 class="uk-card-title uk-margin-remove-bottom">Selecting the right fonts and colors</h3>
-                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2017-05-25T00:00:00-05:00">
-
-                            May 25, 2017
-                        </time></p>
+                        <h3 class="uk-card-title uk-margin-remove-bottom">{{ post2.title }}</h3>
+                        <p class="uk-text-meta uk-margin-remove-top">
+                            <time datetime="{{ post1.date }}">{{ post2.date | date(format="%B %d, %Y") }}</time>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="uk-card-body">
-                <p>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.</p>
-
-
+                <p>{{ post2.description }}</p>
             </div>
             <div class="uk-card-footer">
                 <span class="uk-button uk-button-text">Read more →</span>
