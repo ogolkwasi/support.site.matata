@@ -229,6 +229,7 @@
 
         <div class="uk-margin-medium-top uk-grid-small uk-flex-center uk-text-center uk-margin-medium-top" data-uk-grid="">
             {% if page.extra.team %}
+            <pre>{{ page.extra.team | jsonify }}</pre>
               {% for member in page.extra.team %}
                 <div>
                   <div class="uk-card">
@@ -256,12 +257,16 @@
 <div class="uk-section uk-text-center">
     <div class="uk-container uk-container-small">
         <div data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
-            <h2 class="uk-h1 uk-margin-bottom">Didn't find an answer?</h2>
-            <p class="uk-text-lead uk-text-center">Get in touch with us for details on setup and additional custom services pricing</p>
-            <a class="uk-button uk-button-primary uk-button-large uk-margin-medium-top" href="/contact/">Contact Us</a>
+            <h2 class="uk-h1 uk-margin-bottom">{{ section.extra.contact_section.title }}</h2>
+            <p class="uk-text-lead uk-text-center">{{ section.extra.contact_section.text }}</p>
+            <a class="uk-button uk-button-primary uk-button-large uk-margin-medium-top" href="{{ section.extra.contact_section.button_link }}" style="background-color: #11dea7; color: white; border-color: #28a745;">
+                {{ section.extra.contact_section.button_text }}
+            </a>
         </div>
     </div>
 </div>
+
+
 
 
 

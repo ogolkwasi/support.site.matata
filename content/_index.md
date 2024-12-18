@@ -66,7 +66,7 @@ We offer a 30-day return policy...
 [[extra.team]]
 name = "John Brown"
 role = "Support"
-image = "/images/avatar-john.png"
+image = "/static/images/avatar-john.png"
 
 [[extra.team]]
 name = "Sara Galen"
@@ -87,6 +87,17 @@ image = "/images/avatar-tom.png"
 name = "Daniel Shultz"
 role = "Developer"
 image = "/images/avatar-daniel.png"
+
+
+[extra.contact_section]
+title = "Didn't find an answer?."
+text = "Get in touch with us for details on setup and additional custom services pricing"
+button_text = "Contact Us"
+button_link = "/contact/"
+
+
+
+
 
 template = "index.html"
 +++
