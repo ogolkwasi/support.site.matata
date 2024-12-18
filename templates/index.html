@@ -183,18 +183,29 @@
     
                 <p class="uk-text-center uk-text-lead">Find quicke answers to frequent pre-sale questions asked by customers</p>
     
-    
-    
+                <style>
+                    .inline-green:hover {
+                        color: #218838; /* Darker green on hover */
+                    }
+                </style>
+                
                 <ul class="uk-margin-medium-top" data-uk-accordion="multiple: true">
                     {% for item in section.extra.faq %}
                         <li>
-                            <a class="uk-accordion-title uk-box-shadow-hover-small" href="#">{{ item.question }}</a>
+                            <a class="uk-accordion-title uk-box-shadow-hover-small inline-green" 
+                               href="#" 
+                               style="color: #2cefa4; font-weight: bold; text-decoration: none;">
+                                {{ item.question }}
+                            </a>
                             <div class="article-content uk-accordion-content link-primary">
                                 {{ item.answer | safe }}
                             </div>
                         </li>
                     {% endfor %}
                 </ul>
+                
+    
+              
                 
     
         </div>
@@ -211,87 +222,30 @@
 
 <div class="uk-section section-team">
     <div class="uk-container uk-container-expand">
-
-
-            <h2 class="uk-h1 uk-text-center">We are here to help</h2>
-
-
-        <p class="uk-text-lead uk-text-center">Our team is just an email away ready to answer your questions</p>
+        <h2 class="uk-h1 uk-text-center">We are here to help</h2>
+        <p class="uk-text-lead uk-text-center">
+            Our team is just an email away ready to answer your questions
+        </p>
 
         <div class="uk-margin-medium-top uk-grid-small uk-flex-center uk-text-center uk-margin-medium-top" data-uk-grid="">
-
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-evan.png" alt="Evan Wells" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">Evan Wells</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Support</p>
+            {% if page.extra.team %}
+              {% for member in page.extra.team %}
+                <div>
+                  <div class="uk-card">
+                    <img class="uk-border-circle" src="{{ member.image }}" alt="{{ member.name }}" />
+                    <h5 class="uk-margin-remove-bottom uk-margin-top">{{ member.name }}</h5>
+                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">{{ member.role }}</p>
+                  </div>
                 </div>
-            </div>
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-john.png" alt="John Brown" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">John Brown</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Support</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-sara.png" alt="Sara Galen" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">Sara Galen</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Lead Developer</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-alex.png" alt="Alex Koch" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">Alex Koch</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Design Engineer</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-tom.png" alt="Tom Farrell" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">Tom Farrell</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Developer</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="uk-card">
-
-
-                        <img class="uk-border-circle" src="/images/avatar-daniel.png" alt="Daniel Shultz" />
-
-                    <h5 class="uk-margin-remove-bottom uk-margin-top">Daniel Shultz</h5>
-                    <p class="uk-article-meta uk-margin-remove-bottom uk-margin-small-top">Developer</p>
-                </div>
-            </div>
-
-        </div>
-
+              {% endfor %}
+            {% else %}
+              <p>No team members available.</p>
+            {% endif %}
+          </div>
+          
+          
     </div>
 </div>
-
 
 
 

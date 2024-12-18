@@ -48,7 +48,7 @@ answer = """
 <h4>The item support period</h4>
 <p>The item includes support for 6 months from the purchase date...</p>
 <h4>What’s not included in item support?</h4>
-<p>Item support does not include services to modify or extend the item...</p>
+Item support does not include services to modify or extend the item...
 """
 
 [[extra.faq]]
@@ -57,6 +57,36 @@ answer = """
 We offer a 30-day return policy...
 """
 
+
+
+
+
+
+
+[[extra.team]]
+name = "John Brown"
+role = "Support"
+image = "/images/avatar-john.png"
+
+[[extra.team]]
+name = "Sara Galen"
+role = "Lead Developer"
+image = "/images/avatar-sara.png"
+
+[[extra.team]]
+name = "Alex Koch"
+role = "Design Engineer"
+image = "/images/avatar-alex.png"
+
+[[extra.team]]
+name = "Tom Farrell"
+role = "Developer"
+image = "/images/avatar-tom.png"
+
+[[extra.team]]
+name = "Daniel Shultz"
+role = "Developer"
+image = "/images/avatar-daniel.png"
 
 template = "index.html"
 +++
