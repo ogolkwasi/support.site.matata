@@ -5,9 +5,14 @@ description = " Search and browse in depth articles and videos on everything on 
 
 [extra]
 featured_articles = [
-    {title = "How to Get Started with Zola", url = "/post/how-to-get-started-with-zola", excerpt = "A comprehensive guide to kick-start your Zola journey."},
-    {title = "Zola Templating", url = "/post/zola-templating", excerpt = "Learn how to use Zola’s templating system to build dynamic pages."}
+    { title = "How to Get Started with Zola", url = "/blog/post1", excerpt = "A comprehensive guide to kick-start your Zola journey." },
+    { title = "Zola Templating", url = "/blog/post2", excerpt = "Learn how to use Zola’s templating system to build dynamic pages." }
 ]
+
+
+
+
+
 
 
 
@@ -36,6 +41,21 @@ icon = "code"  # Icon for the third card
 
 
 
+[[extra.faq]]
+question = "Do you provide customer support?"
+answer = """
+<p>Having support for your purchased item means that we will be available to you to iron out any potential issues you have in using the item.</p>
+<h4>The item support period</h4>
+<p>The item includes support for 6 months from the purchase date...</p>
+<h4>What’s not included in item support?</h4>
+<p>Item support does not include services to modify or extend the item...</p>
+"""
+
+[[extra.faq]]
+question = "What is the return policy?"
+answer = """
+We offer a 30-day return policy...
+"""
 
 
 template = "index.html"
